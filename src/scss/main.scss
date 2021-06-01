@@ -1,0 +1,97 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+@import 'reset';
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+/*
+*
+* MEASURE YOUR POSTER and change these two variables !
+* 
+*/
+$poster-width: 751;
+$poster-height: 1063;
+
+body {
+	min-height: 100vh;
+	padding: 5vh 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #eee;
+	font-family: sans-serif;
+}
+.poster {
+	position: relative;
+
+	overflow: hidden;
+	filter: contrast(0%) saturate(0%);
+
+	background: rgb(34,193,195);
+	background: linear-gradient(-45deg, rgb(248, 238, 206) 10%, rgb(240, 216, 137) 40%, rgb(93, 197, 245) 70%);
+	background-size: 400% 400%;
+	animation: skyGradient 13s linear infinite;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+
+	@media (min-aspect-ratio: #{$poster-width}/#{$poster-height}) {
+		width: 90vh * ($poster-width/$poster-height);
+		height: 90vh;
+	}
+
+	@media (max-aspect-ratio: #{$poster-width}/#{$poster-height}) {
+		width: 90vw;
+		height: 90vw * ($poster-height/$poster-width);
+	}
+
+	/*
+		Everything in % so it's fully responsive!!!!!
+	*/
+
+	.full-size {
+		position: absolute;
+		top: 7%;
+		left: 0%;
+		width: 100%; // of the poster width, should match height automatically
+	}
+
+	.character {
+		transform: translateY(8%) scale(.8);
+	}
+	.yoda{
+		transform: scale(.8);
+	}
+	.cloak{
+		transform: translate(-13%, -1%) scale(.8);
+	}
+	img{
+		filter: contrast(0%) saturate(0%);
+	}
+}
+
+@keyframes skyGradient{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

@@ -1,0 +1,164 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+/*
+*
+* MEASURE YOUR POSTER and change these two variables !
+* 
+*/
+body {
+	min-height: 100vh;
+	padding: 5vh 5vw;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	background: #eee;
+	font-family: sans-serif;
+}
+
+.poster {
+	position: relative;
+	overflow: hidden;
+	-webkit-filter: contrast(0%) saturate(0%);
+	        filter: contrast(0%) saturate(0%);
+	background: #22c1c3;
+	background: linear-gradient(-45deg, #f8eece 10%, #f0d889 40%, #5dc5f5 70%);
+	background-size: 400% 400%;
+	-webkit-animation: skyGradient 13s linear infinite;
+	        animation: skyGradient 13s linear infinite;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+	/*
+		Everything in % so it's fully responsive!!!!!
+	*/
+}
+@media (min-aspect-ratio: 751/1063) {
+	.poster {
+		width: 63.5841956726vh;
+		height: 90vh;
+	}
+}
+@media (max-aspect-ratio: 751/1063) {
+	.poster {
+		width: 90vw;
+		height: 127.3901464714vw;
+	}
+}
+.poster .full-size {
+	position: absolute;
+	top: 7%;
+	left: 0%;
+	width: 100%;
+}
+.poster .character {
+	-webkit-transform: translateY(8%) scale(0.8);
+	        transform: translateY(8%) scale(0.8);
+}
+.poster .yoda {
+	-webkit-transform: scale(0.8);
+	        transform: scale(0.8);
+}
+.poster .cloak {
+	-webkit-transform: translate(-13%, -1%) scale(0.8);
+	        transform: translate(-13%, -1%) scale(0.8);
+}
+.poster img {
+	-webkit-filter: contrast(0%) saturate(0%);
+	        filter: contrast(0%) saturate(0%);
+}
+
+@-webkit-keyframes skyGradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes skyGradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/*# sourceMappingURL=main.css.map */
