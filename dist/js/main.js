@@ -17,6 +17,10 @@ tl.to(".poster", {
   delay: -10,
   duration: 3,
   y: 10
+}).to(".posterHead", {
+  delay: -5,
+  duration: 1.3,
+  opacity: "100%"
 });
 var yoda = new TimelineMax();
 yoda.to(".yoda", {

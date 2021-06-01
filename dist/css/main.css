@@ -115,6 +115,9 @@ body {
 		height: 127.3901464714vw;
 	}
 }
+.poster .posterHead {
+	opacity: 0%;
+}
 .poster .full-size {
 	position: absolute;
 	top: 7%;

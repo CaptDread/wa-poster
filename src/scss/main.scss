@@ -59,6 +59,11 @@ body {
 		height: 90vw * ($poster-height/$poster-width);
 	}
 
+
+	.posterHead{
+		opacity: 0%;
+	}
+
 	/*
 		Everything in % so it's fully responsive!!!!!
 	*/

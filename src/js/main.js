@@ -7,6 +7,7 @@ tl
 .to(`img`, {delay: -10, duration: 7, filter: "contrast(100%) saturate(100%)"})
 .from(`.sand-back`, {delay:-10, duration:3, y:10})
 .from(`.sand-mid`, {delay:-10, duration:3, y:10})
+.to(`.posterHead`, {delay:-5, duration: 1.3, opacity:"100%" })
 
 
 
