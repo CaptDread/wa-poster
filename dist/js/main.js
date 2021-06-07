@@ -1,7 +1,9 @@
 "use strict";
 
 console.log('Hello World from main.js!');
-var tl = new TimelineMax();
+var tl = new TimelineMax({
+  repeat: -1
+});
 tl.to(".poster", {
   duration: 7,
   filter: "contrast(100%) saturate(100%)"
@@ -9,18 +11,22 @@ tl.to(".poster", {
   delay: -10,
   duration: 7,
   filter: "contrast(100%) saturate(100%)"
-}).from(".sand-back", {
-  delay: -10,
+}).to(".sand-back", {
+  delay: -7,
   duration: 3,
   y: 10
-}).from(".sand-mid", {
-  delay: -10,
+}).to(".sand-mid", {
+  delay: -7,
   duration: 3,
   y: 10
 }).to(".posterHead", {
   delay: -5,
   duration: 1.3,
   opacity: "100%"
+}).to(".poster", {
+  delay: 5,
+  duration: 3,
+  filter: "contrast(0%) saturate(0%)"
 });
 var yoda = new TimelineMax();
 yoda.to(".yoda", {

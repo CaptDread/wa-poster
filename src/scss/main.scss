@@ -34,7 +34,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #eee;
+	background: #666;
 	font-family: sans-serif;
 }
 .poster {
@@ -44,7 +44,7 @@ body {
 	filter: contrast(0%) saturate(0%);
 
 	background: rgb(34,193,195);
-	background: linear-gradient(-45deg, rgb(248, 238, 206) 10%, rgb(240, 216, 137) 40%, rgb(93, 197, 245) 70%);
+	background: linear-gradient(-45deg, rgb(248, 238, 206) 10%, rgb(238, 150, 238) 20%, rgb(240, 216, 137) 70%);
 	background-size: 400% 400%;
 	animation: skyGradient 13s linear infinite;
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
@@ -60,19 +60,30 @@ body {
 	}
 
 
-	.posterHead{
-		opacity: 0%;
-	}
-
+	
 	/*
-		Everything in % so it's fully responsive!!!!!
+	Everything in % so it's fully responsive!!!!!
 	*/
-
+	
 	.full-size {
 		position: absolute;
 		top: 7%;
 		left: 0%;
 		width: 100%; // of the poster width, should match height automatically
+	}
+
+
+	.sand-back{
+		transform: translateY(10%);
+	}
+	.sand-mid{
+		transform: translateY(10%);
+	}
+
+	.posterHead{
+		margin-left: 5%;
+		opacity: 0%;
+		width: 90%;
 	}
 
 	.character {

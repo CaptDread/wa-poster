@@ -84,7 +84,7 @@ body {
 	        justify-content: center;
 	-webkit-align-items: center;
 	        align-items: center;
-	background: #eee;
+	background: #666;
 	font-family: sans-serif;
 }
 
@@ -94,13 +94,13 @@ body {
 	-webkit-filter: contrast(0%) saturate(0%);
 	        filter: contrast(0%) saturate(0%);
 	background: #22c1c3;
-	background: linear-gradient(-45deg, #f8eece 10%, #f0d889 40%, #5dc5f5 70%);
+	background: linear-gradient(-45deg, #f8eece 10%, #ee96ee 20%, #f0d889 70%);
 	background-size: 400% 400%;
 	-webkit-animation: skyGradient 13s linear infinite;
 	        animation: skyGradient 13s linear infinite;
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
 	/*
-		Everything in % so it's fully responsive!!!!!
+	Everything in % so it's fully responsive!!!!!
 	*/
 }
 @media (min-aspect-ratio: 751/1063) {
@@ -115,14 +115,24 @@ body {
 		height: 127.3901464714vw;
 	}
 }
-.poster .posterHead {
-	opacity: 0%;
-}
 .poster .full-size {
 	position: absolute;
 	top: 7%;
 	left: 0%;
 	width: 100%;
+}
+.poster .sand-back {
+	-webkit-transform: translateY(10%);
+	        transform: translateY(10%);
+}
+.poster .sand-mid {
+	-webkit-transform: translateY(10%);
+	        transform: translateY(10%);
+}
+.poster .posterHead {
+	margin-left: 5%;
+	opacity: 0%;
+	width: 90%;
 }
 .poster .character {
 	-webkit-transform: translateY(8%) scale(0.8);
